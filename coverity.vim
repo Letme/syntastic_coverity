@@ -22,6 +22,7 @@ function! SyntaxCheckers_c_coverity_GetLocList() dict
     let makeprg = self.makeprgBuild({ 'args': '--text-output-style=oneline --whole-program --analyze-scm-modified', 'fname': '' })
 
     let errorformat =
+        \ '%E[ERROR] %m,' .
         \ '%E%f:%l: CID %# %m.,' .
         \ '%W%f:%l: integer_signedness_changing_conversion: %m.,' .
         \ '%W%f:%l: %# misra_violation: %m.,' .

@@ -56,8 +56,12 @@ SCM (Source Control), so it will not run just per single file.
 Troubleshooting
 ---------------
 
-At the moment if nothing happens on save or syntastic checker invocation, then
-you can check if Coverity Fast Desktop Analysis is even connecting to server. 
+At the moment if nothing happens on save or Syntastic checker invocation, then
+you can should run Coverity Fast Desktop Analysis from terminal. The checker
+does provide output on Coverity standard `[ERRORS]`, but I might have missed
+some of other error messages which will not display through Syntastic in your
+Vim.
+ 
 If you have vim script from Coverity, you can do this directly from VIM with
 command: `:Coverity` .
 

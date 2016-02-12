@@ -1,7 +1,8 @@
 Syntastic
 =========
 
-It is a great plugin which can be found on [GitHub](https://github.com/scrooloose/syntastic).
+It is a great VIM plugin which can be found on 
+[GitHub](https://github.com/scrooloose/syntastic).
 Since syntax checkers in this repo were not able to fit inside syntastic checkers
 I have decided to maintain just checkers and not the whole Syntastic with them.
 
@@ -21,15 +22,20 @@ mkdir -p ~/.vim/syntax_checkers/c
 git clone git@github.com:Letme/syntastic_coverity.git ~/.vim/syntax_checkers/c
 ```
 
-Coverity inline syntax checker
-==============================
+I am using Syntastic a lot and when we started using Coverity I missed the
+direct feedback I get in my Vim from my compilation. Because I did not like the
+output of the provided vim script, I have decided to integrate Coverity
+inside Syntastic syntax checkers. This repo is a result of that integration.
+
+Coverity external syntax checker
+================================
 
 Coverity is static analysis tool which is much smarter than your average lint.
-It produces actual analysis flow to your vim browser using the informational
-messages so that you can easily follow the execution path and figure out how
-the analysis came to the conclusion they did. Coverity provides some script,
-but I was not really happy with the output so I have integrated that into the
-Syntastic. Now all Coverity defects (with CIDs) report as Error, while execution
+It produces actual analysis flow to your vim using the informational
+messages, so that you can easily follow the execution path and figure out how
+the analysis came to the conclusion they did.
+
+All Coverity defects (with CIDs) report as Error, while execution
 path is part of the informational messages under the CID which nicely leads you
 through the problem.
 

@@ -21,6 +21,7 @@ function! SyntaxCheckers_c_coverity_GetLocList() dict
 
     let errorformat =
         \ '%E[ERROR] %m,' .
+        \ '%W[WARNING] %m,' .
         \ '%E%f:%l: CID %# %m.,' .
         \ '%W%f:%l: integer_signedness_changing_conversion: %m.,' .
         \ '%W%f:%l: %# misra_violation: %m.,' .

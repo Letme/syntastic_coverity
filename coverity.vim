@@ -17,7 +17,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! SyntaxCheckers_c_coverity_GetLocList() dict
-    let makeprg = self.makeprgBuild({ 'args': '--text-output-style=oneline --whole-program --analyze-scm-modified', 'fname': '' })
+    let makeprg = self.makeprgBuild({ 'args': '--text-output-style=oneline --whole-program'})
 
     let errorformat =
         \ '%E[ERROR] %m,' .

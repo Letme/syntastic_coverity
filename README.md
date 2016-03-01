@@ -13,6 +13,13 @@ configure Syntastic, then add the following line to your `.vimrc`:
 let g:syntastic_c_checkers = ['coverity']
 ```
 
+or if you want to use other checkers as well and just add Coverity in case
+`coverity.conf` is in that directory then add following line to your `.vimrc`:
+
+```
+autocmd FileType c let g:syntastic_c_checkers = findfile('coverity.conf', '.;') != '' ? ['coverity'] + g:syntastic_c_checkers : g:syntastic_c_checkers
+```
+
 Since Syntastic loads any checker vim home directory/syntax_checkers/c/ you
 should clone this to `~/.vim/syntax_checkers/c/` . To make it easier just run 
 below commands if you do not have `syntax_checkers/c` directory under your `.vim`
@@ -49,9 +56,7 @@ Setup and requirements
 To run this checker you need to have Coverity Analysis installed and in path.
 Beside this you will need to have cov-run-desktop all setup and ready to run.
 The project you are analyzing should be prepared for Coverity Fast Desktop
-Analysis with `coverity.conf` file in root. With all this assumptions, at the
-moment checker assumes that files you want to check are marked as changes in
-SCM (Source Control), so it will not run just per single file.
+Analysis with `coverity.conf` file in root.
 
 Troubleshooting
 ---------------

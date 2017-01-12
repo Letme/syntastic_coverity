@@ -1,7 +1,7 @@
-Syntastic
-=========
+Syntastic and Coverity
+======================
 
-It is a great VIM plugin which can be found on 
+Syntastic is a great VIM plugin which can be found on 
 [GitHub](https://github.com/scrooloose/syntastic).
 Since syntax checkers in this repo were not able to fit inside syntastic checkers
 I have decided to maintain just checkers and not the whole Syntastic with them.

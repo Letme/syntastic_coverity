@@ -17,7 +17,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! SyntaxCheckers_c_coverity_GetLocList() dict
-    let makeprg = self.makeprgBuild({ 'args': '--text-output-style=oneline --whole-program'})
+    let makeprg = self.makeprgBuild({ 'args': '--text-output-style=oneline --whole-program --auth-key-file .coverity_auth_key_file'})
 
     let errorformat =
         \ '%E[ERROR] %m,' .
